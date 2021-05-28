@@ -71,6 +71,7 @@ int main(void){
 }
 int play_0(int ID,int n,int SC[2] , int *H)
 {
+    //うまぴょい
     int sum=0,i=1,count=0;
     if(n==0){
         return 1;
