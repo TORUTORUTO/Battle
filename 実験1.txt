@@ -1,0 +1,18 @@
+int 実験１(int ID,int n,int SC[2] , int *H)
+{
+    int sum=0,i=1,count=0;
+    if(n==0){
+        return 1;
+    }
+    while(count!=n){  //初回から現在にいたるまで協調を持ちかけてられているのなら協調する
+        sum += H[2*n-ID];
+        i = i+2;
+        count++;
+    }
+    if(sum==0){     //ずっと協調を持ちかけられているのなら協調を選択
+        return 0;
+    }
+    else{           //一度でも裏切られたなら裏切りを選択
+        return 1;
+    }
+}
